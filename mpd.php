@@ -3,7 +3,7 @@
 /*
 Plugin Name: 	Multisite Post Duplicator
 Plugin URI: 	http://www.wpmaz.uk
-Description:  	Duplicate/Copy and page/post from one site on a multisite nextwork to another
+Description:    Duplicate any individual page, post or custom post type from one site on your multisite network to another.
 Version: 	0.1
 Author: 	Mario Jaconelli
 Author URI:  	http://www.wpmaz.uk

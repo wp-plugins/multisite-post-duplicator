@@ -25,23 +25,40 @@ function duplicate_over_multisite($post_id_to_copy, $new_blog_id, $post_type, $p
     $data = get_post_custom($mdp_post);
  
     $meta_values = get_post_meta($post_id_to_copy);
+
  
     switch_to_blog($new_blog_id);
  
-    	$post_id = wp_insert_post( $mdp_post);
+    $post_id = wp_insert_post( $mdp_post);
  
-        foreach ( $data as $key => $values) {
-            foreach ($values as $value) {
-                add_post_meta( $post_id, $key, $value );
+       foreach ( $data as $key => $values) {
+
+           foreach ($values as $value) {
+
+               add_post_meta( $post_id, $key, $value );
+
             }
+
         }
+
+  	 foreach ($meta_values as $key => $values) {
+
+           foreach ($values as $value) {
  
-  	foreach ($meta_values as $key => $values) {
-            foreach ($values as $value) {
-                add_post_meta( $post_id, $key, $value );
+                if(is_serialized($value)){
+                 
+                    add_post_meta( $post_id, $key, unserialize($value));
+
+                }else{
+
+                    add_post_meta( $post_id, $key, $value );
+
+                }
+               
             }
-        }
- 
+
+         }
+
      restore_current_blog();
      
      return $post_id;

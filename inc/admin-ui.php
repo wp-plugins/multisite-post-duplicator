@@ -9,6 +9,8 @@ function mpd_admin_page(){
 
 function mpd_admin_menu_markup(){
 
+	global $wp_post_types;
+
 	$success = false;
 
 	if(isset($_POST['duplicate-submit'])){
@@ -23,7 +25,10 @@ function mpd_admin_menu_markup(){
 			$new_postid = duplicate_over_multisite($mdp_PostID, $mdp_NewBlog, $mdp_PostType, $mdp_userID, $mdp_prefix, $mdp_postStatus);
 
 			$success = true;
+
 	}
+
+	
 
 	$post_types = get_post_types();
 		
@@ -47,11 +52,7 @@ function mpd_admin_menu_markup(){
 
     		<div class="updated mdp-updated">
 
-    			<p><strong>Congratuations. The page/post was duplicated successfully.</strong></p>
-
-    			<?php $blog_details = get_blog_details($mdp_NewBlog) ?>
-
-    			<p>You can edit your new post/page <a href="<?php echo $blog_details->siteurl .'/wp-admin/post.php?post=' . $new_postid . '&action=edit'; ?>">here</a>. 
+    			<h3><strong>Congratuations. The page/post was duplicated successfully.</strong></h3>
 
     		</div>
 

@@ -3,7 +3,6 @@ Contributors: MagicStick
 Tags: multisite, duplicate, copy, post, page, meta, individual, one
 Requires at least: 3.0.1
 Tested up to: 4.1.1
-Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +21,7 @@ Features:
 *   Clean and friendly User Interface
 *   Select what status you want your new copies post to be i.e Published, Draft etc
 *   Specify a prefix for the new post to avoid confusion
+*   Works with Contact Form 7
 
 == Installation ==
 
@@ -52,6 +52,10 @@ Yes. However, you have to have the same custom fields defined in each of your si
 1. User Interface
 
 == Changelog ==
+
+= 0.2 =
+* Added support for Contact Form 7
+* Duplication now correctly deals with serialised post meta
 
 = 0.1 =
 * Initial Release

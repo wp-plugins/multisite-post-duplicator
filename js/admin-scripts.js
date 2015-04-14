@@ -57,13 +57,15 @@ jQuery(document).ready(function($) {
 
 							$( ".el2" ).change(function() {
 
-								var blog_id = $('.el2').find(":selected").text();
+								var blog_id = $('.el2').find(":selected").val();
+								var source_postype = $('.el0').find(":selected").text();
 									
 									$('.el2sc.spinner-container img').show();
 
 									data =  {
 												action : 'mdp_site_users',
-												el2blogid : blog_id
+												el2blogid : blog_id,
+												sourceblog : source_postype
 											};
 
 									$.post(ajaxurl,data,function(response) {

@@ -54,7 +54,7 @@ Yes. However, you have to have the same custom fields defined in each of your si
 == Changelog ==
 
 = 0.2.1 =
-* Fixed bug where all posts were not appearing in certain senarios
+* Fixed bug where all posts were not appearing in certain scenarios
 
 = 0.2 =
 * Added support for Contact Form 7

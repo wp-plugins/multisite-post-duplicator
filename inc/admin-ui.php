@@ -128,7 +128,8 @@ function mpd_admin_menu_markup(){
 function mdp_get_posts_for_type(){
 
 	$args = array(
-		'post_type' => $_POST['post_type']
+		'post_type' => $_POST['post_type'],
+		'post_per_page' => -1
 	);
 
 	$the_query = new WP_Query( $args );

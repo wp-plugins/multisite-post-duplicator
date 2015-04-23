@@ -129,7 +129,7 @@ function mpd_admin_menu_markup(){
 
 function mdp_get_posts_for_type(){
 
-	if($_POST['post_type'] == ' - Any Post Type -' ){
+	if($_POST['post_type'] == ' - All Post Types -' ){
 			$mpd_posttype_query = 'any';
 			$all= true;
 	}else{

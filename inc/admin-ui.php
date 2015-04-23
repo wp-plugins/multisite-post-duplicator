@@ -127,9 +127,17 @@ function mpd_admin_menu_markup(){
 
 function mdp_get_posts_for_type(){
 
+	if($_POST['post_type'] == ' - Any Post Type -' ){
+			$mpd_posttype_query = 'any';
+			$all= true;
+	}else{
+			$mpd_posttype_query = $_POST['post_type'];
+			$all= false;
+	}
+
 	$args = array(
-		'post_type' => $_POST['post_type'],
-		'post_per_page' => -1
+		'post_type' => $mpd_posttype_query,
+		'posts_per_page' => -1
 	);
 
 	$the_query = new WP_Query( $args );
@@ -146,7 +154,7 @@ function mdp_get_posts_for_type(){
 
     			<option value="<?php echo get_the_ID(); ?>">
 
-    				<?php the_title( );?>
+    				<?php the_title( );?><?php if($all){ echo " - (" . get_post_type( get_the_ID()) . ")" ;} ?>
 
     			</option>
 

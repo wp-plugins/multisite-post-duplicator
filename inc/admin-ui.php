@@ -94,6 +94,8 @@ function mpd_admin_menu_markup(){
 
 		    		<option></option>
 
+		    		<option value="any" > - All Post Types -</option>
+
 		    		<?php foreach ($post_types as $post_type):?>
 
 		    			<option value="<?php echo $post_type; ?>">

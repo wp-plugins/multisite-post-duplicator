@@ -2,7 +2,7 @@
 Contributors: MagicStick
 Tags: multisite, duplicate, copy, post, page, meta, individual, one
 Requires at least: 3.0.1
-Tested up to: 4.1.2
+Tested up to: 4.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +52,9 @@ Yes. However, you have to have the same custom fields defined in each of your si
 1. User Interface
 
 == Changelog ==
+
+= 0.3.1 =
+* Fixed Activiation errors.
 
 = 0.3 =
 * You can now filter by 'any' post type.

@@ -165,7 +165,8 @@ function mdp_get_posts_for_type(){
 			<?php wp_reset_postdata(); ?>
 		</select> <div class="el1sc spinner-container"><img src="<?php echo plugins_url('../css/select2-spinner.gif',__FILE__); ?>"/></div>
 
-	<?
+	<?php
+
 	die();
 }
 
@@ -194,7 +195,7 @@ function mdp_get_site_on_network(){
 	</select> <div class="el2sc spinner-container"><img src="<?php echo plugins_url('../css/select2-spinner.gif',__FILE__); ?>"/></div>
 
 	
-	<?
+	<?php
 	
 	die();
 
@@ -233,7 +234,7 @@ function mdp_get_users_on_site(){
 	
 	</p>
 	
-	<?
+	<?php
 	
 	die();
 

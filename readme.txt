@@ -54,7 +54,7 @@ Yes. However, you have to have the same custom fields defined in each of your si
 == Changelog ==
 
 = 0.3.1 =
-* Fixed Activiation errors.
+* Fixed Activation errors.
 
 = 0.3 =
 * You can now filter by 'any' post type.
